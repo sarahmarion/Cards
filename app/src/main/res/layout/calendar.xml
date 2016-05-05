@@ -5,12 +5,17 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.imanoweb.calendarview.CustomCalendarView
+    <com.ttu.idk1606.cards.app.view.CardCustomCalendarView
             android:id="@+id/calendar_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/black"
-            app:calendarBackgroundColor="@color/black"
-            app:dayOfWeekTextColor="@color/white">
-    </com.imanoweb.calendarview.CustomCalendarView>
+            android:background="@color/dark_purple"
+            app:calendarBackgroundColor="@color/dark_purple"
+            app:titleLayoutBackgroundColor="@color/medium_purple"
+            app:calendarTitleTextColor="@color/light_purple"
+            app:dayOfWeekTextColor="@color/light_purple"
+            app:disabledDayBackgroundColor="@color/dark_purple"
+            app:disabledDayTextColor="@color/medium_purple"
+            app:currentDayOfMonthColor="@color/light_purple">
+    </com.ttu.idk1606.cards.app.view.CardCustomCalendarView>
 </LinearLayout>
