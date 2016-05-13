@@ -4,13 +4,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.Toast;
+import com.ttu.idk1606.cards.app.adapter.CategoryAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calendar);
+        setContentView(R.layout.categories);
+
+        final GridView gridView = (GridView) findViewById(R.id.categories);
+        gridView.setAdapter(new CategoryAdapter(this));
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String category = (String) gridView.getItemAtPosition(position);
+                Toast.makeText(getApplicationContext(), category, Toast.LENGTH_SHORT).show();
+            }
+
+        });
     }
 
     @Override

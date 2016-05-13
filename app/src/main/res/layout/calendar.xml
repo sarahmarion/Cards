@@ -16,6 +16,7 @@
             app:dayOfWeekTextColor="@color/light_purple"
             app:disabledDayBackgroundColor="@color/dark_purple"
             app:disabledDayTextColor="@color/medium_purple"
-            app:currentDayOfMonthColor="@color/light_purple">
+            app:currentDayOfMonthColor="@color/light_purple"
+            app:selectedDayTextColor="@color/light_purple">
     </com.ttu.idk1606.cards.app.view.CardCustomCalendarView>
 </LinearLayout>
