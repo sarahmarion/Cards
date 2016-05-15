@@ -1,5 +1,6 @@
 package com.ttu.idk1606.cards.app;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String category = (String) gridView.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), category, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(), CardsActivity.class);
+                intent.putExtra("category", (String) gridView.getItemAtPosition(position));
+                startActivity(intent);
             }
 
         });
