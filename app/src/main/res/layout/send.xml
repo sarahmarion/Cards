@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/tableLayout2"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/dark_purple">
+    <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:hint="Email">
+    </EditText>
+
+    </TableRow>
+    <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/dark_purple">
+    <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:hint="Subject">
+    </EditText>
+</TableRow>
+    <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/dark_purple">
+    <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:hint="Message">
+    </EditText>
+</TableRow>
+    <include android:id="@+id/footer" android:layout_height="wrap_content"
+             layout="@layout/bottom_menu_final" android:layout_width="fill_parent"
+             android:layout_centerHorizontal="true"
+             android:layout_alignParentBottom="true" >
+    </include>
+</TableLayout>
