@@ -32,7 +32,7 @@ public class CardAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return getCardPath(position);
     }
 
     @Override
@@ -50,8 +50,12 @@ public class CardAdapter extends BaseAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         ImageView imageView = (ImageView) inflater.inflate(R.layout.card, null);
-        imageView.setImageURI(Uri.parse("android.resource://" + context.getPackageName() + "/drawable/" + cards.get(position)));
+        imageView.setImageURI(Uri.parse(getCardPath(position)));
         return imageView;
+    }
+
+    private String getCardPath(int position) {
+        return "android.resource://" + context.getPackageName() + "/drawable/" + cards.get(position);
     }
 
     private List<String> getCards() {

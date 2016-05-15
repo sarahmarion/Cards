@@ -5,10 +5,10 @@
         android:layout_height="wrap_content" >
 
     <ImageView
-            android:id="@+id/logo"
+            android:id="@+id/card"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/card3" >
+            android:background="@color/light_purple">
     </ImageView>
 
     <include android:id="@+id/footer" android:layout_height="wrap_content"

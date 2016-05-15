@@ -1,11 +1,12 @@
-package com.ttu.idk1606.cards.app;
+package com.ttu.idk1606.cards.app.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
+import com.ttu.idk1606.cards.app.R;
 import com.ttu.idk1606.cards.app.adapter.CardAdapter;
 
 public class CardsActivity  extends AppCompatActivity {
@@ -25,7 +26,9 @@ public class CardsActivity  extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(), CardActivity.class);
+                intent.putExtra("imagePath", (String) gridView.getItemAtPosition(position));
+                startActivity(intent);
             }
 
         });

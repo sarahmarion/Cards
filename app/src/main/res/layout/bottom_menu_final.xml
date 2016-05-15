@@ -12,16 +12,22 @@
             android:background="@color/dark_purple">
 
         <TextView
-                android:id="@+id/textView1"
-                android:text="Back"
+                android:id="@+id/menu_back"
+                android:text="@string/back"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="0"/>
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:textColor="@color/light_purple"/>
 
         <TextView
-                android:id="@+id/textView2"
-                android:text="Finish"
+                android:id="@+id/menu_finish"
+                android:text="@string/finish"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="1"/>
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:textColor="@color/light_purple"/>
 
     </TableRow>
 </TableLayout>
